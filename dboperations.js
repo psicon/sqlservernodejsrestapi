@@ -5,7 +5,7 @@ const sql = require('mssql');
 async function getOrders() {
     try {
         let pool = await sql.connect(config);
-        let products = await pool.request().query("SELECT * from Orders");
+        let products = await pool.request().query("SELECT * from aranes_cat");
         return products.recordsets;
     }
     catch (error) {

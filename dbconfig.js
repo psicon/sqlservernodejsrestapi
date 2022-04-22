@@ -1,15 +1,15 @@
 
 const config = {
-    user :'foo',
-    password :'foo',
-    server:'127.0.0.1',
-    database:'Products',
+    user :'sa',
+    password :'2017@SchoWo',
+    server:'RZWSDB01',
+    database:'SWDB',
     options:{
         trustedconnection: true,
         enableArithAbort : true, 
-        instancename :'SQLEXPRESS'
+        instancename :'MSSQL'
     },
-    port : 55892
+    port : 1433
 }
 
 module.exports = config; 

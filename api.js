@@ -19,7 +19,7 @@ router.use((request,response,next)=>{
    next();
 })
 
-router.route('/orders').get((request,response)=>{
+router.route('/services').get((request,response)=>{
 
     dboperations.getOrders().then(result => {
        response.json(result[0]);
@@ -27,7 +27,7 @@ router.route('/orders').get((request,response)=>{
 
 })
 
-router.route('/orders/:id').get((request,response)=>{
+router.route('/services/:id').get((request,response)=>{
 
     dboperations.getOrder(request.params.id).then(result => {
        response.json(result[0]);
@@ -35,7 +35,7 @@ router.route('/orders/:id').get((request,response)=>{
 
 })
 
-router.route('/orders').post((request,response)=>{
+router.route('/services').post((request,response)=>{
 
     let order = {...request.body}
 
